@@ -15,34 +15,36 @@ public class Main {
             System.out.println("Установите версию приложения для Android по ссылке");
         // Задание 2.
         short clientDeviceYear = 2015;
-        if (clientOS == 0 && clientDeviceYear >= 2015)
+        if (clientDeviceYear >= 2015)
         {
-            System.out.println("Установите версию приложения для iOS по ссылке");
+            System.out.print("Установите версию приложения ");
         }
-        else if (clientOS == 0 && clientDeviceYear < 2015)
+        else
         {
-            System.out.println("Установите облегченную версию приложения для iOS по ссылке");
+            System.out.print("Установите облегченную версию приложения ");
         }
-        if (clientOS == 1 && clientDeviceYear >= 2015)
+        if (clientOS == 1)
         {
-            System.out.println("Установите версию приложения для Android по ссылке");
+            System.out.println("для Android по ссылке");
         }
-        else if (clientOS == 1 && clientDeviceYear < 2015)
+        else
         {
-            System.out.println("Установите облегченную версию приложения для Android по ссылке");
+            System.out.println("для iOS по ссылке");
         }
         // Задание 3.
         int year = 2021;
-        int firstYear = 1584;
-        if ((year - firstYear)%4 == 0 && (year-firstYear)%100 != 0 && (year-firstYear)%400 == 0)
+        if ((year%4 == 0 && year%100 != 0) || year%400 == 0)
         {
             System.out.println(year + " год является високосным.");
         }
-        else if ((year - firstYear)%4 !=0 || (year-firstYear)%100 == 0 && (year-firstYear)%400 != 0)
+        else
         {
             System.out.println(year + " год не является високосным.");
         }
-        else System.out.println(year + " год является високосным.");
+        if (year < 1584)
+        {
+            System.out.println(year + " год не является високосным.");
+        }
         // Задание 4.
         short deliveryDistance = 95;
         short deliveryTime;
