@@ -56,14 +56,14 @@ public class Main {
         else if (deliveryDistance > 20 && deliveryDistance < 60)
         {
             deliveryTime = 2;
-            System.out.println("Потртебуется дней: " + deliveryTime + " для доставки");
+            System.out.println("Потртебуется дней: " + deliveryTime + " для доставки.");
         }
         else if (deliveryDistance >= 60 && deliveryDistance <= 100)
         {
             deliveryTime = 3;
-            System.out.println("Потртебуется дней: " + deliveryTime + " для доставки");
+            System.out.println("Потртебуется дней: " + deliveryTime + " для доставки.");
         }
-        else System.out.println("Доставки свыше 100 км. нет");
+        else System.out.println("Доставки свыше 100 км. нет.");
         // Задание 5.
         byte monthNumber = 12;
         switch (monthNumber)
