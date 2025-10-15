@@ -4,96 +4,66 @@ public class Main {
     public static void main(String[] args) {
         //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
         // to see how IntelliJ IDEA suggests fixing it.
-        System.out.println("Условные операторы 2, домашнее задание № 5.");
+        System.out.println("Циклы 1, домашнее задание № 6.");
         // Задание 1.
-        byte clientOS = 0;
-        if (clientOS == 0)
+        for (int i=1; i <= 10; i++)
         {
-            System.out.println("Установите версию приложения для iOS по ссылке");
+        System.out.println(i);
         }
-        else
-            System.out.println("Установите версию приложения для Android по ссылке");
         // Задание 2.
-        short clientDeviceYear = 2015;
-        if (clientDeviceYear >= 2015)
+        for (int i=10; i >= 1; i--)
         {
-            System.out.print("Установите версию приложения ");
-        }
-        else
-        {
-            System.out.print("Установите облегченную версию приложения ");
-        }
-        if (clientOS == 1)
-        {
-            System.out.println("для Android по ссылке");
-        }
-        else
-        {
-            System.out.println("для iOS по ссылке");
+        System.out.println(i);
         }
         // Задание 3.
-        int year = 2021;
-        if ((year%4 == 0 && year%100 != 0) || year%400 == 0)
+        for (int i=0; i<=17; i = i+2)
         {
-            System.out.println(year + " год является високосным.");
-        }
-        else
-        {
-            System.out.println(year + " год не является високосным.");
-        }
-        if (year < 1584)
-        {
-            System.out.println(year + " год не является високосным.");
+        System.out.println(i);
         }
         // Задание 4.
-        short deliveryDistance = 95;
-        short deliveryTime;
-        if (deliveryDistance <= 20)
+        for (int i = 10; i>=-10; i--)
         {
-            deliveryTime = 1;
-            System.out.println("Потртебуется дней: " + deliveryTime + " для доставки");
+        System.out.println(i);
         }
-        else if (deliveryDistance > 20 && deliveryDistance < 60)
-        {
-            deliveryTime = 2;
-            System.out.println("Потртебуется дней: " + deliveryTime + " для доставки.");
-        }
-        else if (deliveryDistance >= 60 && deliveryDistance <= 100)
-        {
-            deliveryTime = 3;
-            System.out.println("Потртебуется дней: " + deliveryTime + " для доставки.");
-        }
-        else System.out.println("Доставки свыше 100 км. нет.");
         // Задание 5.
-        byte monthNumber = 12;
-        switch (monthNumber)
+        for (int i = 1904; i <= 2096; i= i+4)
         {
-            case 1: System.out.println("Январь, сезон зима.");
-                break;
-            case 2: System.out.println("Февраль, сезон зима.");
-                break;
-            case 3: System.out.println("Март, сезон весна.");
-                break;
-            case 4: System.out.println("Апрель, сезон весна.");
-                break;
-            case 5: System.out.println("Май, сезон весна.");
-                break;
-            case 6: System.out.println("Июнь, сезон лето.");
-                break;
-            case 7: System.out.println("Июль, сезон лето.");
-                break;
-            case 8: System.out.println("Август, сезон лето.");
-                break;
-            case 9: System.out.println("Сентябрь, сезон осень.");
-                break;
-            case 10: System.out.println("Октябрь, сезон осень.");
-                break;
-            case 11: System.out.println("Ноябрь, сезон осень.");
-                break;
-            case 12: System.out.println("Декабрь, сезон зима.");
-                break;
-            default: System.out.println("В году 12 месяцев!");
+        if (i%100!=0 || i%400==0)
+            {
+            System.out.println(i + " год является високосным");
+            }
         }
-
+        // Задание 6.
+        for (int i = 1; i<=14; i++)
+        {
+        System.out.println(i*7);
+        }
+        // Задание 7.
+        int j = 1;
+        System.out.println(j);
+        for (int i = 1; i <= 9; i++)
+        {
+        System.out.println(j=j*2);
+        }
+        // Задание 8.
+        double capital = 0;
+        for (int i = 1; i <=12; i++)
+        {
+        capital = capital + 29000;
+        System.out.println("Месяц " + i + ", сумма накоплений равна " + capital + " рублей.");
+        }
+        // Задание 9. Сумма считается с учетом добавления 29000 на счет каждый месяц.
+        capital = 29000;
+        for (int i = 1; i <=12; i++)
+        {
+        capital = capital + capital*0.01;
+        System.out.printf("Месяц %d, сумма накоплений равна %.2f рублей. %n",i,capital);
+        capital = capital + 29000;
+        }
+        // Задание 10.
+        for (int i = 1; i <= 10; i++)
+        {
+        System.out.println("2*" + i + "=" + i*2);
+        }
     }
     }
