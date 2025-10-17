@@ -1,99 +1,79 @@
+import java.util.Arrays;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
         //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
         // to see how IntelliJ IDEA suggests fixing it.
-        System.out.println("Массивы, урок 1. Домашнее задание №8.");
+        System.out.println("Массивы, урок 2. Домашнее задание №9.");
         // Задание 1.
-        int mass[] = new int[3];
-        for (int i = 0; i < mass.length; i++) {
-            mass[i] = i + 1;
+        int[] inputArray1 = {8000, 10000, 12000, 20000, 15000};
+        int[] outputArray1 = new int[4];
+        int sum = 0;
+        int max = inputArray1[0];
+        int min = inputArray1[0];
+        int mid = 0;
+        for (int tax : inputArray1) {
+            sum = sum + tax;
+            if (tax < min) {
+                min = tax;
+            }
+            if (tax > max) {
+                max = tax;
+            }
+            mid++;
         }
-        double massiv[] = {1.57, 7.654, 9.986};
-        for (int i = 0; i < massiv.length; i++) {
+        mid = sum / mid;
+        outputArray1[0] = sum;
+        outputArray1[1] = max;
+        outputArray1[2] = min;
+        outputArray1[3] = mid;
+        System.out.println(Arrays.toString(inputArray1));
+        System.out.println(Arrays.toString(outputArray1));
+        //Задание 2.
+        int[] inputArray2 = {35000, 30000, 50000, 43000, 37500};
+        double[] outputArray2 = new double[5];
+        int i = 0;
+        for (int nalog : inputArray2) {
+            double nal = nalog * 0.13;
+            outputArray2[i] = nal;
+            i++;
         }
-        int massive[] = new int[12];
-        for (int i = 0; i < massive.length; i++) {
-            massive[i] = i * i;
+        System.out.println(Arrays.toString(inputArray2));
+        System.out.println(Arrays.toString(outputArray2));
+        // Задание 3.
+        int[] inputArray3 = {5000, 6000, 4000, 5000, 8000};
+        boolean[] outputArray3 = new boolean[5];
+        i = 0;
+        for (int bonus : inputArray3) {
+            if (bonus > 5000) {
+                outputArray3[i] = true;
+            }
+            i++;
         }
-        // Задание 2.
-        for (int i = 0; i < mass.length; i++) {
-            if (i == mass.length - 1) {
-                System.out.println(mass[i]);
+        System.out.println(Arrays.toString(inputArray3));
+        System.out.println(Arrays.toString(outputArray3));
+        // Задание 4.
+        int[] inputArray4 = {5000, 6000, 4000, -5000, 8000};
+        boolean[] outputArray4 = {true};
+        for (int money : inputArray4) {
+            if (money < 0) {
+                outputArray4[0] = false;
                 break;
             }
-            System.out.print(mass[i] + ", ");
         }
-        for (int i = 0; i < massiv.length; i++) {
-            if (i == massiv.length - 1) {
-                System.out.println(massiv[i]);
-                break;
+        System.out.println(Arrays.toString(inputArray4));
+        System.out.println(Arrays.toString(outputArray4));
+        // Задание 5.
+        int[] inputArray5 = {5000, -6000, -4000, -5000, 8000};
+        int[] outputArray5 = {0};
+        for (int rent : inputArray5) {
+            if (rent > 0) {
+                outputArray5[0]++;
             }
-            System.out.print(massiv[i] + ", ");
         }
-        for (int i = 0; i < massive.length; i++) {
-            if (i == massive.length - 1) {
-                System.out.println(massive[i]);
-                break;
-            }
-            System.out.print(massive[i] + ", ");
-        }
-        //Задание 3.
-        int temp;
-        double tempD;
-        for (int i = 0; i < mass.length / 2; i++) {
-            temp = mass[i];
-            mass[i] = mass[mass.length - 1 - i];
-            mass[mass.length - 1 - i] = temp;
-        }
-        for (int i = 0; i < mass.length; i++) {
-            if (i == mass.length - 1) {
-                System.out.print(mass[i]);
-                break;
-            }
-            System.out.print(mass[i] + ", ");
-        }
-        System.out.println();
-        for (int i = 0; i < massiv.length / 2; i++) {
-            tempD = massiv[i];
-            massiv[i] = massiv[massiv.length - 1 - i];
-            massiv[massiv.length - 1 - i] = tempD;
-        }
-        for (int i = 0; i < massiv.length; i++) {
-            if (i == massiv.length - 1) {
-                System.out.print(massiv[i]);
-                break;
-            }
-            System.out.print(massiv[i] + ", ");
-        }
-        System.out.println();
-        for (int i = 0; i < massive.length / 2; i++) {
-            temp = massive[i];
-            massive[i] = massive[massive.length - 1 - i];
-            massive[massive.length - 1 - i] = temp;
-        }
-        for (int i = 0; i < massive.length; i++) {
-            if (i == massive.length - 1) {
-                System.out.print(massive[i]);
-                break;
-            }
-            System.out.print(massive[i] + ", ");
-        }
-        System.out.println();
-        //Задание 4.
-        for (int i = 0; i < mass.length; i++) {
-            if (mass[i] % 2 != 0) {
-                mass[i] = mass[i] + 1;
-            }
-            System.out.print(mass[i] + " ");
-        }
-        System.out.println();
-        for (int i = 0; i < massive.length; i++) {
-            if (massive[i] % 2 != 0) {
-                massive[i] = massive[i] + 1;
-            }
-            System.out.print(massive[i] + " ");
-        }
+        System.out.println(Arrays.toString(inputArray5));
+        System.out.println(Arrays.toString(outputArray5));
     }
 }
