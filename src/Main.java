@@ -11,9 +11,9 @@ public class Main {
         Author fedorDostoevski = new Author("Федор", "Достоевский");
         Book warAndPeace = new Book(levTolstoy, "Война и мир", 2001);
         System.out.println(warAndPeace.getAuthor() + " " + warAndPeace.getTitle() + " " + warAndPeace.getYear());
-        Book idiot = new Book(fedorDostoevski, "Бесы", 1995);
-        System.out.println(idiot.getAuthor() + " " + idiot.getTitle() + " " + idiot.getYear());
-        idiot.setYear(2000);
-        System.out.println(idiot.getAuthor() + " " + idiot.getTitle() + " " + idiot.getYear());
+        Book besy = new Book(fedorDostoevski, "Бесы", 1995);
+        System.out.println(besy.getAuthor() + " " + besy.getTitle() + " " + besy.getYear());
+        besy.setYear(2000);
+        System.out.println(besy.getAuthor() + " " + besy.getTitle() + " " + besy.getYear());
     }
 }
