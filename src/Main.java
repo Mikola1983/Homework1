@@ -1,15 +1,19 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.time.LocalDate;
+import java.util.Arrays;
+import java.util.Locale;
+
 public class Main {
     public static void main(String[] args) {
         //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
         // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
-
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("Первое задание" + i);
-        }
+        System.out.println("Объекты. Домашнее задание 11.");
+        Author levTolstoy = new Author("Лев", "Толстой");
+        Author fedorDostoevski = new Author("Федор", "Достоевский");
+        Book warAndPeace = new Book(levTolstoy, "Война и мир", 2001);
+        System.out.println(warAndPeace.getAuthor() + " " + warAndPeace.getTitle() + " " + warAndPeace.getYear());
+        Book besy = new Book(fedorDostoevski, "Бесы", 1995);
+        System.out.println(besy.getAuthor() + " " + besy.getTitle() + " " + besy.getYear());
+        besy.setYear(2000);
+        System.out.println(besy.getAuthor() + " " + besy.getTitle() + " " + besy.getYear());
     }
 }
