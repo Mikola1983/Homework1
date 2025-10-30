@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Product {
     private int id;
     private String name;
@@ -27,7 +29,20 @@ public class Product {
         return this.category;
     }
 
+    @Override
     public String toString() {
         return "Товар [ артикул: " + id + ", название: " + name + ", цена: " + price + ", категория: " + category + ".]";
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Product product = (Product) o;
+        return id == product.id && Objects.equals(category, product.category);
     }
 }
